@@ -90,7 +90,7 @@ The strength profile evaluates areas such as:
 TechPath/
 ├── database/
 │   ├── schema.sql
-│   └── techpath_db.sql
+│   └── seed.sql
 ├── public/
 │   ├── css/
 │   │   └── style.css
@@ -137,17 +137,19 @@ npm install
 
 ### 3. Prepare the MySQL database
 
-Import the project database from:
-
-```text
-database/techpath_db.sql
-```
-
-The database structure is also available separately in:
+Create the database structure first by importing:
 
 ```text
 database/schema.sql
 ```
+
+Then import the reusable application content from:
+
+```text
+database/seed.sql
+```
+
+`seed.sql` contains only public configuration and learning content such as career tracks, quiz questions, scoring weights, roadmaps, and mini-tasks. It does not contain student accounts, emails, quiz attempts, or other user-generated records.
 
 ### 4. Configure environment variables
 
@@ -205,7 +207,7 @@ http://localhost:3000
 
 ## Deployment
 
-The repository is being prepared for online deployment. Production database credentials will be configured using secure environment variables provided by the hosting platform and will not be stored in the repository.
+The application is structured for deployment on a Node.js hosting platform with a managed MySQL-compatible database. Production database credentials should be configured using the hosting platform's environment-variable settings and should never be committed to the repository.
 
 ## Developer
 
