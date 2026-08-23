@@ -1,64 +1,53 @@
-TechPath
+# TechPath
 
-TechPath is a web-based career discovery platform that helps students identify the most suitable technology career path based on their interests, strengths, and work preferences.
+TechPath is a full-stack career discovery platform designed to help beginners explore technology career paths and discover which track best matches their interests, strengths, and work preferences.
 
-The system guides students through a complete journey starting with registration, followed by a career discovery quiz, personalized recommendations, learning roadmaps, and practical career experience tasks.
+Instead of choosing a field based only on descriptions, users move through a guided journey: registration, a career discovery quiz, personalized recommendations, learning roadmaps, and practical mini-tasks that let them experience the nature of each track.
 
---------------------------------------------------
+## Key Features
 
-Project Features
+### Student Experience
+- Student registration
+- 16-question career discovery quiz
+- Weighted recommendation engine
+- Best match and second-best match
+- Compatibility percentages
+- Personal strength profile
+- Career track exploration
+- Learning roadmaps
+- Practical mini-tasks
+- Career experience feedback
 
-Student Module
+### Admin Dashboard
+- Dashboard overview
+- Student management
+- Quiz statistics
+- Recommendation analysis
+- Career experience analytics
+- Track statistics
 
-- Student Registration
-- Career Discovery Quiz
-- Personalized Recommendation
-- Best Match and Second Match
-- Personal Strength Analysis
-- Career Roadmaps
-- Career Details
-- Practical Mini Tasks
-- Career Experience Feedback
+## Technology Stack
 
-Admin Module
-
-- Dashboard Overview
-- Student Management
-- Quiz Statistics
-- Career Recommendation Analysis
-- Career Experience Analytics
-- Track Statistics
-
---------------------------------------------------
-
-Technology Stack
-
-Frontend
-
+**Frontend**
 - HTML5
 - CSS3
 - JavaScript
 
-Backend
-
+**Backend**
 - Node.js
 - Express.js
 
-Database
-
+**Database**
 - MySQL
 
-Packages
-
+**Main Packages**
 - express
 - mysql2
 - dotenv
 
---------------------------------------------------
+## Technology Career Tracks
 
-Technology Career Tracks
-
-The system currently includes eight technology career tracks:
+TechPath currently includes eight technology tracks:
 
 1. AI & Automation
 2. Data Analysis
@@ -69,163 +58,157 @@ The system currently includes eight technology career tracks:
 7. Cybersecurity
 8. Cloud & DevOps
 
---------------------------------------------------
+## Recommendation Engine
 
-Recommendation Engine
-
-The recommendation engine evaluates student answers using a weighted scoring system.
-
-The final result includes:
+The recommendation engine evaluates quiz responses using a weighted scoring system. It calculates compatibility across the available tracks and returns:
 
 - Best Career Match
 - Second Career Match
 - Compatibility Percentage
 - Personal Strength Profile
 
-The strength profile evaluates:
+The strength profile evaluates areas such as:
 
 - Programming Interest
-- Logic and Problem Solving
-- Automation and Systems Thinking
-- Creativity and User Thinking
+- Logic & Problem Solving
+- Automation & Systems Thinking
+- Creativity & User Thinking
 - Data Orientation
 
---------------------------------------------------
+## User Journey
 
-Career Journey
+1. Register
+2. Complete the Career Discovery Quiz
+3. Receive Personalized Recommendations
+4. Explore the Suggested Learning Roadmap
+5. Try a Practical Mini-Task
+6. Reflect on the Career Experience
 
-Students complete the following steps:
+## Project Structure
 
-1. Registration
-2. Career Discovery Quiz
-3. Career Recommendation
-4. Learning Roadmap
-5. Career Experience
-
---------------------------------------------------
-
-Project Structure
-
-TechPath
-│
-├── database
-│   ├── techpath_db.sql
-│   └── schema.sql
-│
-├── public
-│   ├── css
-│   ├── js
-│   └── images
-│
-├── views
-│
+```text
+TechPath/
+├── database/
+│   ├── schema.sql
+│   └── techpath_db.sql
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── admin.js
+│       ├── mini-task.js
+│       ├── quiz.js
+│       ├── recommendation.js
+│       ├── task-success.js
+│       ├── track-details.js
+│       └── tracks.js
+├── views/
+│   ├── admin.html
+│   ├── index.html
+│   ├── mini-task.html
+│   ├── quiz.html
+│   ├── recommendation.html
+│   ├── register.html
+│   ├── task-success.html
+│   ├── track-details.html
+│   └── tracks.html
 ├── server.js
 ├── package.json
 ├── package-lock.json
 ├── .env.example
 ├── .gitignore
 └── README.md
+```
 
---------------------------------------------------
+## Getting Started
 
-Database
+### 1. Clone the repository
 
-The application uses a MySQL database.
+```bash
+git clone https://github.com/rewanebrahembadr-cmyk/TechPath.git
+cd TechPath
+```
 
-Main database tables include:
+### 2. Install dependencies
 
-- Students
-- Career Tracks
-- Quiz Questions
-- Quiz Answers
-- Quiz Attempts
-- Recommendations
-- Career Roadmaps
-- Skills
-- Tools
-- Job Roles
-- Mini Tasks
-- Career Experience Results
-
-Database file:
-
-database/techpath_db.sql
-
---------------------------------------------------
-
-Installation
-
-Install project dependencies
-
+```bash
 npm install
+```
 
-Import the database
+### 3. Prepare the MySQL database
 
-Open MySQL Workbench and import:
+Import the project database from:
 
+```text
 database/techpath_db.sql
+```
 
-Configure environment variables
+The database structure is also available separately in:
 
-Create a file named `.env` using `.env.example` and update the database settings.
+```text
+database/schema.sql
+```
 
-Example:
+### 4. Configure environment variables
 
+Create a `.env` file based on `.env.example`:
+
+```env
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
+DB_PASSWORD=your_mysql_password
 DB_NAME=techpath_db
 PORT=3000
+```
 
-Run the project
+> Never commit your real `.env` file or database password to GitHub.
 
-node server.js
+### 5. Run the application
 
-Open the application in your browser:
+```bash
+npm start
+```
 
+Then open:
+
+```text
 http://localhost:3000
+```
 
---------------------------------------------------
+## Main Routes
 
-Available Pages
+| Route | Purpose |
+|---|---|
+| `/` | Home page |
+| `/register` | Student registration |
+| `/quiz` | Career discovery quiz |
+| `/recommendation` | Recommendation results |
+| `/tracks` | Career tracks |
+| `/track-details` | Track details |
+| `/mini-task` | Career experience task |
+| `/task-success` | Task result |
+| `/admin` | Admin dashboard |
 
-/                  Home Page
-/register          Student Registration
-/quiz              Career Discovery Quiz
-/recommendation    Recommendation Results
-/tracks            Career Tracks
-/track-details     Track Details
-/mini-task         Career Experience
-/task-success      Task Result
-/admin             Admin Dashboard
+## What This Project Demonstrates
 
---------------------------------------------------
+- Full-stack web development
+- REST-style APIs
+- Node.js and Express.js
+- MySQL database design
+- CRUD operations
+- Form validation
+- Parameterized SQL queries
+- Database transactions
+- Weighted recommendation logic
+- Responsive web design
+- Environment-variable based configuration
 
-Learning Outcomes
+## Deployment
 
-This project demonstrates practical experience with:
+The repository is being prepared for online deployment. Production database credentials will be configured using secure environment variables provided by the hosting platform and will not be stored in the repository.
 
-- Full Stack Web Development
-- Node.js
-- Express.js
-- REST APIs
-- MySQL Database Design
-- CRUD Operations
-- Recommendation Systems
-- Responsive Web Design
+## Developer
 
---------------------------------------------------
+**Rewan Ebrahem Badr Ahmed**
 
-Developer
-
-Rewan Ebrahem Badr Ahmed
-
-Business Administration Student
-
-AI & Data Science Trainee
-
---------------------------------------------------
-
-Notes
-
-This project was developed as an educational academic project.
+Built as an educational full-stack project focused on combining technology career guidance with practical exploration.
