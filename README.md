@@ -25,6 +25,7 @@ Instead of choosing a field based only on descriptions, users move through a gui
 - Recommendation analysis
 - Career experience analytics
 - Track statistics
+- Protected admin access in production
 
 ## Technology Stack
 
@@ -112,6 +113,7 @@ TechPath/
 │   ├── task-success.html
 │   ├── track-details.html
 │   └── tracks.html
+├── admin-security.js
 ├── server.js
 ├── package.json
 ├── package-lock.json
@@ -161,14 +163,25 @@ DB_USER=root
 DB_PASSWORD=your_mysql_password
 DB_NAME=techpath_db
 PORT=3000
+NODE_ENV=development
+ADMIN_USER=admin
+ADMIN_PASSWORD=choose_a_strong_admin_password
 ```
 
-> Never commit your real `.env` file or database password to GitHub.
+> Never commit your real `.env`, database credentials, or admin password to GitHub.
 
 ### 5. Run the application
 
+For normal/production-style startup:
+
 ```bash
 npm start
+```
+
+For local development:
+
+```bash
+npm run dev
 ```
 
 Then open:
@@ -189,7 +202,16 @@ http://localhost:3000
 | `/track-details` | Track details |
 | `/mini-task` | Career experience task |
 | `/task-success` | Task result |
-| `/admin` | Admin dashboard |
+| `/admin` | Protected admin dashboard |
+| `/health` | Hosting health check |
+
+## Security Notes
+
+- Secrets are loaded from environment variables.
+- `.env` is excluded from Git tracking.
+- Public database seed data contains no student records.
+- In production, `/admin` and `/api/admin/dashboard` require the credentials configured through `ADMIN_USER` and `ADMIN_PASSWORD`.
+- If production admin credentials are not configured, the admin endpoints are hidden instead of being exposed publicly.
 
 ## What This Project Demonstrates
 
@@ -204,10 +226,25 @@ http://localhost:3000
 - Weighted recommendation logic
 - Responsive web design
 - Environment-variable based configuration
+- Basic production access protection
 
-## Deployment
+## Deployment Readiness
 
-The application is structured for deployment on a Node.js hosting platform with a managed MySQL-compatible database. Production database credentials should be configured using the hosting platform's environment-variable settings and should never be committed to the repository.
+The application is prepared for deployment on a Node.js hosting platform connected to a hosted MySQL database.
+
+Production configuration should provide these environment variables through the hosting dashboard rather than storing them in the repository:
+
+```text
+DB_HOST
+DB_USER
+DB_PASSWORD
+DB_NAME
+NODE_ENV=production
+ADMIN_USER
+ADMIN_PASSWORD
+```
+
+The hosting platform can provide `PORT` automatically. A health-check endpoint is available at `/health`.
 
 ## Developer
 
