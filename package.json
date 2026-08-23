@@ -4,7 +4,7 @@
   "description": "A full-stack career discovery platform that helps beginners explore technology paths through an interactive quiz, personalized recommendations, roadmaps, and practical mini-tasks.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node -r ./admin-security.js server.js",
     "dev": "node server.js"
   },
   "keywords": [
@@ -18,6 +18,9 @@
   "author": "Rewan Ebrahem Badr Ahmed",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
