@@ -1,13 +1,21 @@
 {
   "name": "techpath",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A full-stack career discovery platform that helps beginners explore technology paths through an interactive quiz, personalized recommendations, roadmaps, and practical mini-tasks.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "career-discovery",
+    "technology",
+    "full-stack",
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "Rewan Ebrahem Badr Ahmed",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
