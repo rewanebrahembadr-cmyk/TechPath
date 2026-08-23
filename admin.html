@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Start Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-page">
+
+        <section class="admin-heading">
+            <div>
+                <p class="tagline">System Overview</p>
+
+                <h2>Admin Dashboard</h2>
+
+                <p>
+                    Review student activity, quiz results,
+                    recommendations, and career experiences.
+                </p>
+            </div>
+
+            <button
+                id="refresh-dashboard-button"
+                class="secondary-button"
+                type="button"
+            >
+                Refresh Dashboard
+            </button>
+        </section>
+
+        <section
+            id="admin-loading"
+            class="admin-loading"
+        >
+            <h3>Loading dashboard data...</h3>
+
+            <p>
+                Please wait while TechPath prepares the latest statistics.
+            </p>
+        </section>
+
+        <section
+            id="admin-content"
+            class="admin-content hidden"
+        >
+
+            <section class="admin-stats-grid">
+
+                <article class="admin-stat-card">
+                    <span class="admin-stat-icon">👨‍🎓</span>
+
+                    <div>
+                        <p>Total Students</p>
+
+                        <h3 id="total-students">
+                            0
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="admin-stat-card">
+                    <span class="admin-stat-icon">📝</span>
+
+                    <div>
+                        <p>Completed Quizzes</p>
+
+                        <h3 id="total-quiz-attempts">
+                            0
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="admin-stat-card">
+                    <span class="admin-stat-icon">🎯</span>
+
+                    <div>
+                        <p>Career Experiences</p>
+
+                        <h3 id="total-task-attempts">
+                            0
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="admin-stat-card">
+                    <span class="admin-stat-icon">🧭</span>
+
+                    <div>
+                        <p>Available Tracks</p>
+
+                        <h3 id="total-tracks">
+                            0
+                        </h3>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="admin-grid">
+
+                <article class="admin-panel">
+
+                    <div class="admin-panel-heading">
+                        <div>
+                            <p class="tagline">
+                                Recommendation Analysis
+                            </p>
+
+                            <h3>
+                                Most Recommended Tracks
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div
+                        id="track-statistics"
+                        class="track-statistics-list"
+                    >
+                    </div>
+
+                </article>
+
+                <article class="admin-panel">
+
+                    <div class="admin-panel-heading">
+                        <div>
+                            <p class="tagline">
+                                Experience Feedback
+                            </p>
+
+                            <h3>
+                                Career Experience Summary
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-admin-summary">
+
+                        <div>
+                            <span>Average Enjoyment</span>
+
+                            <strong id="average-enjoyment">
+                                0 / 5
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Correct Decisions</span>
+
+                            <strong id="correct-task-percentage">
+                                0%
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Want to Continue</span>
+
+                            <strong id="continue-percentage">
+                                0%
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+            <section class="admin-panel">
+
+                <div class="admin-panel-heading">
+
+                    <div>
+                        <p class="tagline">
+                            Student Records
+                        </p>
+
+                        <h3>
+                            Latest Students
+                        </h3>
+                    </div>
+
+                    <input
+                        id="student-search"
+                        type="search"
+                        placeholder="Search by name or email"
+                        class="admin-search-input"
+                    >
+
+                </div>
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Student</th>
+                                <th>Email</th>
+                                <th>Faculty</th>
+                                <th>Study Year</th>
+                                <th>Recommended Track</th>
+                                <th>Match</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="students-table-body">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <section class="admin-panel">
+
+                <div class="admin-panel-heading">
+                    <div>
+                        <p class="tagline">
+                            Recent Activity
+                        </p>
+
+                        <h3>
+                            Latest Career Experiences
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Track</th>
+                                <th>Task Result</th>
+                                <th>Enjoyment</th>
+                                <th>Continue?</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="activity-table-body">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <section
+            id="admin-error"
+            class="result-error hidden"
+        >
+            <h2>We could not load the dashboard</h2>
+
+            <p id="admin-error-message">
+                Please refresh the page and try again.
+            </p>
+
+            <button
+                id="retry-dashboard-button"
+                class="primary-button"
+                type="button"
+            >
+                Try Again
+            </button>
+        </section>
+
+    </main>
+
+    <script src="/js/admin.js"></script>
+
+</body>
+</html>

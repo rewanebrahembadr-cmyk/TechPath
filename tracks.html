@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Explore Tracks | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Start Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tracks-page">
+
+        <section class="tracks-hero">
+
+            <p class="tagline">Explore Before You Choose</p>
+
+            <h2>Discover Technology Career Tracks</h2>
+
+            <p>
+                Compare different technology fields, understand their
+                requirements, review their learning roadmaps, and try a
+                practical career experience before making your decision.
+            </p>
+
+            <a href="/register" class="primary-button">
+                Take the Track Discovery Quiz
+            </a>
+
+        </section>
+
+        <section
+            id="tracks-loading"
+            class="tracks-loading"
+        >
+            <h3>Loading technology tracks...</h3>
+
+            <p>
+                Please wait while we prepare the available career paths.
+            </p>
+        </section>
+
+        <section
+            id="tracks-content"
+            class="tracks-content hidden"
+        >
+
+            <div class="tracks-section-heading">
+
+                <div>
+                    <p class="tagline">All Career Paths</p>
+                    <h3>Choose a Track to Explore</h3>
+                </div>
+
+                <p>
+                    Use the levels below as an initial guide.
+                    They do not represent strict entry requirements.
+                </p>
+
+            </div>
+
+            <div
+                id="tracks-grid"
+                class="tracks-grid"
+            >
+                <!-- JavaScript will add the tracks here -->
+            </div>
+
+        </section>
+
+        <section
+            id="tracks-error"
+            class="result-error hidden"
+        >
+            <h2>We could not load the tracks</h2>
+
+            <p id="tracks-error-message">
+                Please refresh the page and try again.
+            </p>
+
+            <a href="/" class="primary-button">
+                Return Home
+            </a>
+        </section>
+
+    </main>
+
+    <script src="/js/tracks.js"></script>
+
+</body>
+</html>

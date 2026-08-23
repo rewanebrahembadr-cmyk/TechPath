@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Discovery Quiz | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Start Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="quiz-page">
+
+        <section class="quiz-container">
+
+            <div class="quiz-heading">
+                <p class="tagline">Track Discovery Quiz</p>
+
+                <h2>Discover What Suits You</h2>
+
+                <p>
+                    Choose the answer that best describes you.
+                    There are no right or wrong answers.
+                </p>
+            </div>
+
+            <div class="quiz-progress-info">
+                <span id="question-number">Question 1 of 16</span>
+                <span id="progress-percentage">6%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <form id="quiz-form">
+
+                <input
+                    type="hidden"
+                    id="student-id"
+                    name="student_id"
+                >
+
+                <section class="question-card active-question" data-question="1">
+                    <p class="question-category">Analytical Thinking</p>
+
+                    <h3>
+                        I enjoy examining numbers and finding patterns
+                        that help explain a problem.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_1" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_1" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_1" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_1" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_1" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="2">
+                    <p class="question-category">Programming</p>
+
+                    <h3>
+                        I enjoy writing code and solving technical
+                        problems step by step.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_2" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_2" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_2" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_2" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_2" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="3">
+                    <p class="question-category">Creativity</p>
+
+                    <h3>
+                        I care about how digital products look
+                        and how easy they are to use.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_3" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_3" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_3" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_3" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_3" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="4">
+                    <p class="question-category">Automation</p>
+
+                    <h3>
+                        I like finding faster ways to complete
+                        repetitive tasks automatically.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_4" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_4" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_4" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_4" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_4" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="5">
+                    <p class="question-category">Security</p>
+
+                    <h3>
+                        I am interested in discovering risks
+                        and protecting systems from threats.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_5" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_5" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_5" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_5" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_5" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="6">
+                    <p class="question-category">Data</p>
+
+                    <h3>
+                        I enjoy turning raw information into
+                        clear charts and useful conclusions.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_6" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_6" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_6" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_6" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_6" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="7">
+                    <p class="question-category">Infrastructure</p>
+
+                    <h3>
+                        I am interested in servers, cloud systems,
+                        deployment, and how applications stay online.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_7" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_7" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_7" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_7" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_7" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="8">
+                    <p class="question-category">User Experience</p>
+
+                    <h3>
+                        I enjoy understanding people's needs
+                        before designing a solution.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_8" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_8" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_8" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_8" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_8" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="9">
+                    <p class="question-category">Mathematics</p>
+
+                    <h3>
+                        I am comfortable learning mathematical
+                        concepts to solve technical problems.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_9" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_9" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_9" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_9" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_9" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="10">
+                    <p class="question-category">Building Products</p>
+
+                    <h3>
+                        I would enjoy building websites or web
+                        applications that people can interact with.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_10" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_10" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_10" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_10" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_10" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="11">
+                    <p class="question-category">Artificial Intelligence</p>
+
+                    <h3>
+                        I am curious about how systems can learn
+                        from data and make predictions.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_11" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_11" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_11" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_11" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_11" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="12">
+                    <p class="question-category">Troubleshooting</p>
+
+                    <h3>
+                        I stay patient when diagnosing a technical
+                        problem with several possible causes.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_12" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_12" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_12" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_12" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_12" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="13">
+                    <p class="question-category">Business Decisions</p>
+
+                    <h3>
+                        I like using evidence and data to support
+                        business decisions.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_13" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_13" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_13" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_13" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_13" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="14">
+                    <p class="question-category">Visual Design</p>
+
+                    <h3>
+                        I pay attention to colors, typography,
+                        spacing, and visual consistency.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_14" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_14" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_14" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_14" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_14" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="15">
+                    <p class="question-category">Investigation</p>
+
+                    <h3>
+                        I enjoy investigating unusual activity
+                        and identifying its cause.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_15" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_15" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_15" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_15" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_15" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question-card" data-question="16">
+                    <p class="question-category">Work Preference</p>
+
+                    <h3>
+                        I enjoy connecting different tools together
+                        to create one complete workflow.
+                    </h3>
+
+                    <div class="answer-options">
+                        <label>
+                            <input type="radio" name="question_16" value="1">
+                            Strongly Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_16" value="2">
+                            Disagree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_16" value="3">
+                            Neutral
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_16" value="4">
+                            Agree
+                        </label>
+
+                        <label>
+                            <input type="radio" name="question_16" value="5">
+                            Strongly Agree
+                        </label>
+                    </div>
+                </section>
+
+                <p id="quiz-message" class="quiz-message"></p>
+
+                <div class="quiz-buttons">
+                    <button
+                        type="button"
+                        id="previous-button"
+                        class="secondary-button"
+                        disabled
+                    >
+                        Previous
+                    </button>
+
+                    <button
+                        type="button"
+                        id="next-button"
+                        class="primary-button"
+                    >
+                        Next
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="submit-button"
+                        class="primary-button"
+                    >
+                        View My Result
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="/js/quiz.js"></script>
+
+</body>
+</html>

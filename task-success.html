@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Experience Completed | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Retake Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="task-success-page">
+
+        <section
+            id="success-loading"
+            class="task-success-loading"
+        >
+            <h2>Preparing your experience summary...</h2>
+
+            <p>
+                Please wait while we load your result.
+            </p>
+        </section>
+
+        <section
+            id="success-content"
+            class="task-success-container hidden"
+        >
+
+            <article class="success-hero-card">
+
+                <div class="success-check-icon">
+                    ✓
+                </div>
+
+                <p class="tagline">
+                    Career Experience Completed
+                </p>
+
+                <h2>
+                    Great job,
+                    <span id="success-student-name">
+                        Student
+                    </span>!
+                </h2>
+
+                <p>
+                    You have completed a practical experience from the
+                    <strong id="success-track-name">
+                        selected track
+                    </strong>.
+                </p>
+
+            </article>
+
+            <section class="success-journey-card">
+
+                <h3>Your TechPath Journey</h3>
+
+                <div class="success-journey-list">
+
+                    <div class="success-journey-item completed">
+                        <span>✓</span>
+
+                        <div>
+                            <strong>Student Profile</strong>
+                            <p>Your information was saved.</p>
+                        </div>
+                    </div>
+
+                    <div class="success-journey-item completed">
+                        <span>✓</span>
+
+                        <div>
+                            <strong>Track Discovery Quiz</strong>
+                            <p>Your interests were analyzed.</p>
+                        </div>
+                    </div>
+
+                    <div class="success-journey-item completed">
+                        <span>✓</span>
+
+                        <div>
+                            <strong>Career Recommendation</strong>
+                            <p>Your strongest track matches were generated.</p>
+                        </div>
+                    </div>
+
+                    <div class="success-journey-item completed">
+                        <span>✓</span>
+
+                        <div>
+                            <strong>Learning Roadmap</strong>
+                            <p>You explored the skills and stages of the track.</p>
+                        </div>
+                    </div>
+
+                    <div class="success-journey-item completed">
+                        <span>✓</span>
+
+                        <div>
+                            <strong>Career Experience</strong>
+                            <p>You completed a practical career scenario.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="experience-summary-grid">
+
+                <article class="summary-result-card">
+                    <span class="summary-icon">🎯</span>
+
+                    <p>Task Result</p>
+
+                    <h3 id="success-answer-result">
+                        Loading...
+                    </h3>
+                </article>
+
+                <article class="summary-result-card">
+                    <span class="summary-icon">⭐</span>
+
+                    <p>Enjoyment Rating</p>
+
+                    <h3>
+                        <span id="success-enjoyment-rating">
+                            0
+                        </span>
+                        / 5
+                    </h3>
+                </article>
+
+                <article class="summary-result-card">
+                    <span class="summary-icon">🚀</span>
+
+                    <p>Continue This Track?</p>
+
+                    <h3 id="success-continue-choice">
+                        Loading...
+                    </h3>
+                </article>
+
+            </section>
+
+            <section class="experience-insight-card">
+
+                <p class="tagline">
+                    What This Means
+                </p>
+
+                <h3 id="success-insight-title">
+                    Your experience gives you useful career evidence.
+                </h3>
+
+                <p id="success-insight-text">
+                    Your personalized insight will appear here.
+                </p>
+
+            </section>
+
+            <section class="success-next-actions">
+
+                <div>
+                    <p class="tagline">Your Next Step</p>
+
+                    <h3>
+                        Continue exploring before making your final choice.
+                    </h3>
+
+                    <p>
+                        Review the roadmap again or compare this experience
+                        with another technology track.
+                    </p>
+                </div>
+
+                <div class="success-action-buttons">
+
+                    <a
+                        id="success-roadmap-button"
+                        href="#"
+                        class="primary-button"
+                    >
+                        View Learning Roadmap
+                    </a>
+
+                    <a
+                        id="success-recommendation-button"
+                        href="#"
+                        class="secondary-button"
+                    >
+                        Back to Recommendation
+                    </a>
+
+                    <a
+                        href="/tracks"
+                        class="secondary-button"
+                    >
+                        Explore More Tracks
+                    </a>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <section
+            id="success-error"
+            class="result-error hidden"
+        >
+            <h2>We could not load your experience</h2>
+
+            <p id="success-error-message">
+                Please return to your recommendation and try again.
+            </p>
+
+            <a href="/register" class="primary-button">
+                Start Again
+            </a>
+        </section>
+
+    </main>
+
+    <script src="/js/task-success.js"></script>
+
+</body>
+</html>

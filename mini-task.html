@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Experience | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Start Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mini-task-page">
+
+        <section id="task-loading" class="task-loading">
+            <h2>Preparing your career experience...</h2>
+            <p>Please wait while we load your practical task.</p>
+        </section>
+
+        <section id="task-content" class="mini-task-container hidden">
+
+            <div class="task-heading">
+                <p class="tagline">Try Before You Choose</p>
+
+                <h2 id="task-track-name">Career Experience</h2>
+
+                <p>
+                    Complete this short activity to experience one of the
+                    decisions made in this career.
+                </p>
+            </div>
+
+            <section class="experience-progress">
+
+                <div class="experience-step completed">
+                    <span>✓</span>
+                    <p>Profile</p>
+                </div>
+
+                <div class="experience-line completed-line"></div>
+
+                <div class="experience-step completed">
+                    <span>✓</span>
+                    <p>Quiz</p>
+                </div>
+
+                <div class="experience-line completed-line"></div>
+
+                <div class="experience-step completed">
+                    <span>✓</span>
+                    <p>Recommendation</p>
+                </div>
+
+                <div class="experience-line completed-line"></div>
+
+                <div class="experience-step current">
+                    <span>4</span>
+                    <p>Career Experience</p>
+                </div>
+
+            </section>
+
+            <section id="task-card" class="mini-task-card">
+
+                <div class="task-card-heading">
+                    <span class="task-label">Practical Scenario</span>
+
+                    <h3 id="task-title">
+                        Task title will appear here
+                    </h3>
+                </div>
+
+                <p id="task-description" class="task-description">
+                    Task description will appear here.
+                </p>
+
+                <div class="workflow-preview">
+                    <div class="workflow-node">Customer Email</div>
+                    <span>↓</span>
+                    <div class="workflow-node">AI Processing</div>
+                    <span>↓</span>
+                    <div class="workflow-node">Automated Action</div>
+                </div>
+
+                <form id="task-form">
+
+                    <div id="task-options" class="task-options"></div>
+
+                    <p id="task-message" class="quiz-message"></p>
+
+                    <button
+                        type="submit"
+                        id="check-answer-button"
+                        class="primary-button task-submit-button"
+                    >
+                        Check My Decision
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section id="answer-result" class="answer-result hidden">
+
+                <div id="answer-status" class="answer-status"></div>
+
+                <h3 id="answer-title">Your Result</h3>
+
+                <p id="answer-explanation"></p>
+
+                <div class="career-message">
+                    <h4>
+                        You have just experienced a real task from this career.
+                    </h4>
+
+                    <p>
+                        AI Automation professionals design workflows that
+                        connect triggers, AI models, business data, and
+                        automated actions.
+                    </p>
+                </div>
+
+                <section class="experience-feedback">
+
+                    <h3>How did this experience feel?</h3>
+
+                    <form id="feedback-form">
+
+                        <div class="feedback-group">
+                            <label for="enjoyment-rating">
+                                How much did you enjoy this task?
+                            </label>
+
+                            <select
+                                id="enjoyment-rating"
+                                name="enjoyment_rating"
+                                required
+                            >
+                                <option value="">
+                                    Select a rating
+                                </option>
+                                <option value="1">1 - Not enjoyable</option>
+                                <option value="2">2 - Slightly enjoyable</option>
+                                <option value="3">3 - Neutral</option>
+                                <option value="4">4 - Enjoyable</option>
+                                <option value="5">5 - Very enjoyable</option>
+                            </select>
+                        </div>
+
+                        <div class="feedback-group">
+                            <p>
+                                Would you like to continue exploring this track?
+                            </p>
+
+                            <label class="feedback-choice">
+                                <input
+                                    type="radio"
+                                    name="wants_to_continue"
+                                    value="1"
+                                    required
+                                >
+                                Yes, I want to continue
+                            </label>
+
+                            <label class="feedback-choice">
+                                <input
+                                    type="radio"
+                                    name="wants_to_continue"
+                                    value="0"
+                                    required
+                                >
+                                Not sure yet
+                            </label>
+                        </div>
+
+                        <p id="feedback-message" class="quiz-message"></p>
+
+                        <button
+                            type="submit"
+                            id="save-experience-button"
+                            class="primary-button"
+                        >
+                            Save My Experience
+                        </button>
+
+                    </form>
+
+                </section>
+
+            </section>
+
+            <section
+                id="experience-complete"
+                class="experience-complete hidden"
+            >
+                <span class="completion-icon">✓</span>
+
+                <h2>Career Experience Completed!</h2>
+
+                <p>
+                    Your practical result and feedback were saved
+                    successfully.
+                </p>
+
+                <div class="completion-actions">
+                    <a
+                        id="return-roadmap-button"
+                        href="#"
+                        class="secondary-button"
+                    >
+                        Return to Career Roadmap
+                    </a>
+
+                    <a
+                        href="/tracks"
+                        class="primary-button"
+                    >
+                        Explore More Tracks
+                    </a>
+                </div>
+            </section>
+
+        </section>
+
+        <section id="task-error" class="result-error hidden">
+            <h2>We could not load this career experience</h2>
+
+            <p id="task-error-message">
+                Please return to your recommendation and try again.
+            </p>
+
+            <a href="/register" class="primary-button">
+                Start Again
+            </a>
+        </section>
+
+    </main>
+
+    <script src="/js/mini-task.js"></script>
+
+</body>
+</html>

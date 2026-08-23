@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Recommendation | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Retake Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="recommendation-page">
+
+        <section
+            id="loading-section"
+            class="result-loading"
+        >
+            <h2>
+                Preparing your personalized result...
+            </h2>
+
+            <p>
+                Please wait while we analyze your answers.
+            </p>
+        </section>
+
+        <section
+            id="result-section"
+            class="result-container hidden"
+        >
+
+            <div class="result-heading">
+                <p class="tagline">
+                    Your TechPath Recommendation
+                </p>
+
+                <h2>
+                    Great work,
+                    <span id="student-name">
+                        Student
+                    </span>!
+                </h2>
+
+                <p>
+                    Your result is based on your interests,
+                    work preferences, and the activities
+                    you said you enjoy.
+                </p>
+            </div>
+
+            <div class="top-results-grid">
+
+                <article class="best-match-card">
+                    <span class="result-badge">
+                        Best Match
+                    </span>
+
+                    <h3 id="best-track-name">
+                        Track Name
+                    </h3>
+
+                    <div class="percentage-circle">
+                        <span id="best-track-percentage">
+                            0%
+                        </span>
+                    </div>
+
+                    <p id="best-track-description">
+                        Your strongest recommendation
+                        will appear here.
+                    </p>
+
+                    <div class="result-actions">
+
+                        <a
+                            id="best-track-details"
+                            href="#"
+                            class="primary-button"
+                        >
+                            View Career Roadmap
+                        </a>
+
+                        <a
+                            id="best-track-task"
+                            href="#"
+                            class="secondary-button"
+                        >
+                            Experience This Career
+                        </a>
+
+                    </div>
+                </article>
+
+                <article class="second-match-card">
+                    <span
+                        class="result-badge secondary-badge"
+                    >
+                        Second Match
+                    </span>
+
+                    <h3 id="second-track-name">
+                        Track Name
+                    </h3>
+
+                    <p class="second-percentage">
+                        <span id="second-track-percentage">
+                            0%
+                        </span>
+
+                        compatibility
+                    </p>
+
+                    <p id="second-track-description">
+                        Your alternative recommendation
+                        will appear here.
+                    </p>
+
+                    <a
+                        id="second-track-details"
+                        href="#"
+                        class="secondary-button"
+                    >
+                        Explore Second Match
+                    </a>
+                </article>
+
+            </div>
+
+            <section class="journey-progress">
+
+                <div class="journey-step completed">
+                    <span class="step-icon">
+                        ✓
+                    </span>
+
+                    <div>
+                        <strong>Step 1</strong>
+                        <p>Student Profile</p>
+                    </div>
+                </div>
+
+                <div
+                    class="journey-line completed-line"
+                ></div>
+
+                <div class="journey-step completed">
+                    <span class="step-icon">
+                        ✓
+                    </span>
+
+                    <div>
+                        <strong>Step 2</strong>
+                        <p>Track Discovery Quiz</p>
+                    </div>
+                </div>
+
+                <div
+                    class="journey-line completed-line"
+                ></div>
+
+                <div class="journey-step current">
+                    <span class="step-icon">
+                        3
+                    </span>
+
+                    <div>
+                        <strong>Step 3</strong>
+                        <p>Career Recommendation</p>
+                    </div>
+                </div>
+
+                <div class="journey-line"></div>
+
+                <div class="journey-step locked">
+                    <span class="step-icon">
+                        4
+                    </span>
+
+                    <div>
+                        <strong>Step 4</strong>
+                        <p>Learning Roadmap</p>
+                    </div>
+                </div>
+
+                <div class="journey-line"></div>
+
+                <div class="journey-step locked">
+                    <span class="step-icon">
+                        5
+                    </span>
+
+                    <div>
+                        <strong>Step 5</strong>
+                        <p>Career Experience</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="strength-profile-section">
+
+                <div class="section-heading-row">
+
+                    <div>
+                        <p class="tagline">
+                            Personal Strength Analysis
+                        </p>
+
+                        <h3>
+                            Your Strength Profile
+                        </h3>
+
+                        <p class="section-description">
+                            These percentages reflect your
+                            interests and preferred ways of
+                            working based on your quiz answers.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="strength-profile"
+                    class="strength-profile-list"
+                >
+                    <p>
+                        Your strength analysis will appear here.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="why-section">
+
+                <h3>
+                    Why was this track recommended?
+                </h3>
+
+                <p id="recommendation-reason">
+                    The recommendation explanation
+                    will appear here.
+                </p>
+
+                <p class="result-note">
+                    This result is an exploration guide,
+                    not a final career decision. Trying a
+                    real task is the next important step.
+                </p>
+
+            </section>
+
+            <section class="all-results-section">
+
+                <div class="section-heading-row">
+
+                    <div>
+                        <p class="tagline">
+                            Full Analysis
+                        </p>
+
+                        <h3>
+                            Your Track Compatibility
+                        </h3>
+                    </div>
+
+                    <a
+                        href="/tracks"
+                        class="text-link"
+                    >
+                        Compare all tracks
+                    </a>
+
+                </div>
+
+                <div
+                    id="all-track-results"
+                    class="track-results-list"
+                >
+                </div>
+
+            </section>
+
+        </section>
+
+        <section
+            id="error-section"
+            class="result-error hidden"
+        >
+            <h2>
+                We could not load your result
+            </h2>
+
+            <p id="result-error-message">
+                Please return to registration
+                and try again.
+            </p>
+
+            <a
+                href="/register"
+                class="primary-button"
+            >
+                Start Again
+            </a>
+        </section>
+
+    </main>
+
+    <script src="/js/recommendation.js"></script>
+
+</body>
+</html>

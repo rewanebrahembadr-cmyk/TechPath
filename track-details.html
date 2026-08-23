@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Roadmap | TechPath</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>TechPath</h1>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/register">Start Quiz</a>
+                <a href="/tracks">Explore Tracks</a>
+                <a href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="track-details-page">
+
+        <section id="track-loading" class="track-loading">
+            <h2>Loading career roadmap...</h2>
+            <p>Please wait while we prepare the track details.</p>
+        </section>
+
+        <section id="track-content" class="track-details-container hidden">
+
+            <div class="track-hero-card">
+
+                <div>
+                    <p class="tagline">Career Roadmap</p>
+
+                    <h2 id="track-name">Track Name</h2>
+
+                    <p id="track-short-description">
+                        Track description will appear here.
+                    </p>
+                </div>
+
+                <div class="track-hero-actions">
+                    <a
+                        id="experience-career-button"
+                        href="#"
+                        class="primary-button"
+                    >
+                        Experience This Career
+                    </a>
+
+                    <a href="/register" class="secondary-button">
+                        Retake Quiz
+                    </a>
+                </div>
+
+            </div>
+
+            <section class="track-overview-grid">
+
+                <article class="track-info-card">
+                    <span class="track-info-icon">💡</span>
+                    <h3>Coding Level</h3>
+                    <p id="coding-level">-</p>
+                </article>
+
+                <article class="track-info-card">
+                    <span class="track-info-icon">📐</span>
+                    <h3>Math Level</h3>
+                    <p id="math-level">-</p>
+                </article>
+
+                <article class="track-info-card">
+                    <span class="track-info-icon">🎨</span>
+                    <h3>Creativity Level</h3>
+                    <p id="creativity-level">-</p>
+                </article>
+
+                <article class="track-info-card">
+                    <span class="track-info-icon">📊</span>
+                    <h3>Data Level</h3>
+                    <p id="data-level">-</p>
+                </article>
+
+            </section>
+
+            <section class="track-section">
+                <p class="tagline">About the Track</p>
+                <h3>What will you do in this field?</h3>
+
+                <p id="track-full-description" class="track-section-text">
+                    Full description will appear here.
+                </p>
+            </section>
+
+            <section class="track-two-columns">
+
+                <article class="track-section">
+                    <p class="tagline">Core Skills</p>
+                    <h3>Skills You Will Build</h3>
+
+                    <div id="track-skills" class="tag-list"></div>
+                </article>
+
+                <article class="track-section">
+                    <p class="tagline">Tools</p>
+                    <h3>Tools You May Use</h3>
+
+                    <div id="track-tools" class="tag-list"></div>
+                </article>
+
+            </section>
+
+            <section class="track-section">
+                <p class="tagline">Career Opportunities</p>
+                <h3>Possible Job Roles</h3>
+
+                <div id="track-job-roles" class="job-role-list"></div>
+            </section>
+
+            <section class="track-section roadmap-section">
+                <p class="tagline">Learning Plan</p>
+                <h3>Your Suggested Roadmap</h3>
+
+                <div id="track-roadmap" class="roadmap-list"></div>
+            </section>
+
+            <section class="career-next-step">
+                <div>
+                    <p class="tagline">Try Before You Choose</p>
+
+                    <h3>
+                        Ready to experience a real task from this career?
+                    </h3>
+
+                    <p>
+                        Complete a short practical activity to understand
+                        whether you enjoy the nature of this work.
+                    </p>
+                </div>
+
+                <a
+                    id="bottom-experience-button"
+                    href="#"
+                    class="primary-button"
+                >
+                    Start Career Experience
+                </a>
+            </section>
+
+        </section>
+
+        <section id="track-error" class="result-error hidden">
+            <h2>We could not load this track</h2>
+
+            <p id="track-error-message">
+                Please return to the tracks page and try again.
+            </p>
+
+            <a href="/tracks" class="primary-button">
+                Explore Tracks
+            </a>
+        </section>
+
+    </main>
+
+    <script src="/js/track-details.js"></script>
+
+</body>
+</html>
