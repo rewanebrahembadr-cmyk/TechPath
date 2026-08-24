@@ -4,7 +4,7 @@
   "description": "A full-stack career discovery platform that helps beginners explore technology paths through an interactive quiz, personalized recommendations, roadmaps, and practical mini-tasks.",
   "main": "server.js",
   "scripts": {
-    "start": "node -r ./admin-security.js server.js",
+    "start": "node scripts/init-db.js && node -r ./admin-security.js server.js",
     "dev": "node server.js"
   },
   "keywords": [
